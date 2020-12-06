@@ -1,0 +1,75 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indexbody {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/52d1c7e8e4b051d70b460191/1569510099503-BJB081O74AUFP3ZRAZGF/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/CASINO-BACKGROUND1080X1920.jpg?format=2500w");
+  background-size: cover;
+  height: 214px;
+}
+
+.choicebody {
+  background-image: url("https://i.pinimg.com/originals/32/63/6f/32636f5ae775005bad7ae94503c93422.jpg");
+  background-size: cover;
+}
+
+table.center_table {
+  width:70%; 
+  margin-left:15%; 
+  margin-right:15%;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#timerrr {
+  text-align: center;
+}
+
+#date {
+  text-align: center;
+}
+
+#cash {
+  text-align: center;
+}
+
+#billboards {
+  text-align: center;
+}
+
+#scammers {
+  text-align: center;
+}
+
+#internetPresence {
+  text-align: center;
+}
+
+.time_look {
+  text-align: center;
+}
+
+.upgrade_buttons {
+  text-align: center;
+  display: block;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+
+/*display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  ^
+  |
+  for centering
+/*
