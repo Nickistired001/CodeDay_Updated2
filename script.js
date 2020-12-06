@@ -3,8 +3,15 @@ let month = 12; // 1 month = 6 minutes
 let day = 30; // 1 day = 12 seconds
 let hour = 24; // 1 hour = 1/2 second
 
-let money = "";
-localStorage.setItem("moneyStored", "Money: " + money); // money is good
+let money =0;
+let tempmoney = getFromLocalStoreValue("moneyStored");
+if (tempmoney != null) {
+    money = parseInt(tempmoney);
+}
+//localStorage.setItem("moneyStored", "Money: " + money); // money is good
+//TODO: Store time [year,month,day,hour]
+// year = xyz[0]
+
 let billboards = 0; // Bought using money, increases advertisement
 let advertisement = 0; // Formula for advertisement is 1 + 50 * billboards + 2 * spammers + 10 * internetPresence. Feel free to change it if some methods are too OP
 let spammers = 0; // hired through a menu, costs monthly upkeep
@@ -17,10 +24,10 @@ let addictiveness = 1; // makes you get more money
 
 function setintervals() {
     setInterval(doTime, 500);
-    
-    
+
+
     setInterval(() => {
-        ;
+        1 + 1;
     }, 1000);
 }
 
@@ -41,9 +48,9 @@ function doTime() {
         year++;
     }
     console.log(money)
-    localStorage.setItem("moneyStored", "Money: " + money);
+    // localStorage.setItem("moneyStored", "Money: " + money);
     document.getElementById("timerrr").innerHTML = "Date: " + year + "/" + month + "/" + day + " " + hour + ":00";
-    
+
     localStorage.setItem("moneyStored", money);
     document.getElementById("cash").innerHTML = localStorage.getItem("moneyStored");
     localStorage.setItem("billboardsStored", billboards)
@@ -110,11 +117,11 @@ function upgradeGames() {
 }
 
 function getMoney(multiplyer) {
-    paycheck ='';
-    if(multiplyer!= null){
-        paycheck =(2 * parkingSpaces + 10 * addictiveness + 5 * advertisement)*multiplyer;
-    }else{
-        paycheck =(2 * parkingSpaces + 10 * addictiveness + 5 * advertisement);
+    paycheck = 0;
+    if (multiplyer != null) {
+        paycheck = (2 * parkingSpaces + 10 * addictiveness + 5 * advertisement) * multiplyer;
+    } else {
+        paycheck = (2 * parkingSpaces + 10 * addictiveness + 5 * advertisement);
     }
 
     money += paycheck;
@@ -130,15 +137,15 @@ function goBack() {
 }
 
 function updateLocalStoreValue(valueName, value) {
-    if (typeof (Storage) !== "undefined" && typeof (valueName)=="string") {
-            localStorage.setItem(valueName+'',value);
-    }else{
+    if (typeof (Storage) !== "undefined" && typeof (valueName) == "string") {
+        localStorage.setItem(valueName, value);
+    } else {
         alert("You have no local storage get rekt");
     }
 }
 
-function getFromLocalStoreValue(valueName){
-    if (typeof (Storage) !== "undefined" && typeof (valueName)=="string") {
-       return localStorage.getItem(valueName);
+function getFromLocalStoreValue(valueName) {
+    if (typeof (Storage) !== "undefined" && typeof (valueName) == "string") {
+        return localStorage.getItem(valueName);
     }
 }
